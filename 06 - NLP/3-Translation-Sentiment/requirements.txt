@@ -1,0 +1,4 @@
+textblob
+pattern
+pandas
+urllib3
