@@ -1,0 +1,31 @@
+{
+  "name": "ml-ai-timeline",
+  "version": "1.0.0",
+  "description": "An interactive timeline showcasing the evolution of Machine Learning and Artificial Intelligence",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "serve": "python -m http.server 8000",
+    "dev": "python -m http.server 8000"
+  },
+  "keywords": [
+    "timeline",
+    "machine-learning",
+    "artificial-intelligence",
+    "history",
+    "interactive",
+    "visualization"
+  ],
+  "author": "ArewaDS Student",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Auwal007/ArewaDS-ML-Assignments.git"
+  },
+  "homepage": "https://auwal007.github.io/ArewaDS-ML-Assignments/timeline-ml-history/",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "python": ">=3.6"
+  }
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Machine Learning and AI - Timeline</title>
+    <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <style>
+        /* Custom styles for the ML/AI Timeline */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            margin: 0;
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        #timeline-embed {
+            margin: 2rem auto;
+            max-width: 95%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            height: 600px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 2rem;
+            color: white;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer p {
+            margin: 0.5rem 0;
+            opacity: 0.8;
+        }
+
+        /* Loading animation */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .loading::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>The Evolution of Machine Learning and Artificial Intelligence</h1>
+        <p>An interactive timeline showcasing the key milestones that shaped modern AI and ML</p>
+    </div>
+    
+    <div id="timeline-embed"></div>
+    
+    <div class="footer">
+        <p>Created for ArewaDS ML Assignments | Timeline Builder Project</p>
+        <p>Data sources: Various academic papers, historical records, and technology milestones</p>
+    </div>
+
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    <script>
+        // Timeline data embedded directly in HTML
+        const timelineData = {
+            "title": {
+                "text": {
+                    "headline": "The Evolution of Machine Learning and Artificial Intelligence",
+                    "text": "A journey through the key milestones that shaped modern AI and ML"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {
+                        "year": "1943"
+                    },
+                    "text": {
+                        "headline": "First Neural Network Model",
+                        "text": "Warren McCulloch and Walter Pitts created the first mathematical model of a neural network, laying the foundation for artificial neural networks."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1950"
+                    },
+                    "text": {
+                        "headline": "The Turing Test",
+                        "text": "Alan Turing proposed the famous Turing Test in his paper 'Computing Machinery and Intelligence', establishing a benchmark for machine intelligence."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1956"
+                    },
+                    "text": {
+                        "headline": "Birth of Artificial Intelligence",
+                        "text": "The Dartmouth Conference, organized by John McCarthy, coined the term 'Artificial Intelligence' and established AI as a field of study."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1957"
+                    },
+                    "text": {
+                        "headline": "The Perceptron",
+                        "text": "Frank Rosenblatt developed the Perceptron, the first algorithm capable of learning from data through supervised learning."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1965"
+                    },
+                    "text": {
+                        "headline": "First AI Winter Begins",
+                        "text": "Due to overhyped expectations and limited computing power, funding for AI research decreased significantly, marking the first 'AI Winter'."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1986"
+                    },
+                    "text": {
+                        "headline": "Backpropagation Algorithm",
+                        "text": "Rumelhart, Hinton, and Williams popularized the backpropagation algorithm, revolutionizing how neural networks could learn complex patterns."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1997"
+                    },
+                    "text": {
+                        "headline": "Deep Blue Defeats Kasparov",
+                        "text": "IBM's Deep Blue became the first computer to defeat a world chess champion in a match, marking a significant milestone in AI capabilities."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2006"
+                    },
+                    "text": {
+                        "headline": "Deep Learning Renaissance",
+                        "text": "Geoffrey Hinton's work on deep belief networks sparked renewed interest in neural networks, beginning the deep learning revolution."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2012"
+                    },
+                    "text": {
+                        "headline": "AlexNet and ImageNet",
+                        "text": "Alex Krizhevsky's AlexNet won the ImageNet competition by a large margin, demonstrating the power of deep convolutional neural networks."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2016"
+                    },
+                    "text": {
+                        "headline": "AlphaGo Defeats Lee Sedol",
+                        "text": "DeepMind's AlphaGo defeated world champion Lee Sedol in Go, a game previously thought too complex for AI to master."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2017"
+                    },
+                    "text": {
+                        "headline": "Transformer Architecture",
+                        "text": "The 'Attention Is All You Need' paper introduced the Transformer architecture, revolutionizing natural language processing."
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "2022"
+                    },
+                    "text": {
+                        "headline": "ChatGPT and AI Mainstream",
+                        "text": "OpenAI's ChatGPT brought AI to the mainstream, demonstrating conversational AI capabilities to millions of users worldwide."
+                    }
+                }
+            ]
+        };
+
+        // Initialize the Timeline
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // Timeline configuration options
+                const options = {
+                    height: 600,
+                    language: 'en'
+                };
+                
+                // Create the timeline
+                window.timeline = new TL.Timeline('timeline-embed', timelineData, options);
+                
+                console.log('Timeline initialized successfully');
+            } catch (error) {
+                console.error('Error initializing timeline:', error);
+                document.getElementById('timeline-embed').innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: #e74c3c;">
+                        <h3>Error Loading Timeline</h3>
+                        <p>There was an error initializing the timeline: ${error.message}</p>
+                    </div>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Custom styles for the ML/AI Timeline */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    margin: 0 0 1rem 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.header p {
+    margin: 0;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+#timeline-embed {
+    margin: 2rem auto;
+    max-width: 95%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    background: white;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.footer p {
+    margin: 0.5rem 0;
+    opacity: 0.8;
+}
+
+/* Custom timeline overrides */
+.tl-timeline {
+    background: #f8f9fa !important;
+}
+
+.tl-timeline .tl-timeaxis {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+.tl-timeline .tl-timeaxis .tl-timeaxis-content-container {
+    background: transparent !important;
+}
+
+.tl-timeline .tl-slide {
+    background: white !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.tl-timeline .tl-slide .tl-slide-content .tl-slide-content-container h2 {
+    color: #2c3e50 !important;
+    font-weight: 600 !important;
+}
+
+.tl-timeline .tl-slide .tl-slide-content .tl-slide-content-container p {
+    color: #5a6c7d !important;
+    line-height: 1.6 !important;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    #timeline-embed {
+        margin: 1rem;
+        height: 70vh !important;
+    }
+    
+    .header, .footer {
+        padding: 1rem;
+    }
+}
+
+/* Loading animation */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.loading::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
